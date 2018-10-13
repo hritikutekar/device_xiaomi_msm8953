@@ -44,7 +44,7 @@ BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_PAGESIZE :=  2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
-TARGET_KERNEL_SOURCE := kernel/xiaomi/rosy
+TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8953
 
 # ANT
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
@@ -73,7 +73,7 @@ AUDIO_FEATURE_ENABLED_EXT_AMPLIFIER := false
 AUDIO_USE_LL_AS_PRIMARY_OUTPUT := true
 BOARD_SUPPORTS_SOUND_TRIGGER := true
 BOARD_USES_ALSA_AUDIO := true
-USE_CUSTOM_AUDIO_POLICY := 1
+#USE_CUSTOM_AUDIO_POLICY := 1
 USE_XML_AUDIO_POLICY_CONF := 1
 
 # Bootloader
@@ -90,6 +90,7 @@ BLUETOOTH_HCI_USE_MCT := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 BOARD_QTI_CAMERA_32BIT_ONLY := true
 TARGET_TS_MAKEUP := true
+TARGET_USES_QTI_CAMERA_DEVICE := true
 
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
@@ -216,6 +217,7 @@ BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_qcwcn
 WIFI_DRIVER_FW_PATH_AP := "ap"
 WIFI_DRIVER_FW_PATH_STA := "sta"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
+WIFI_HIDL_FEATURE_AWARE := true
 
 # Inherit from the proprietary version
 -include vendor/xiaomi/msm8953-common/BoardConfigVendor.mk

@@ -118,10 +118,10 @@ void vendor_load_properties()
     check_device();
     init_finger_print_properties();
 
-    property_overide("dalvik.vm.heapstartsize", "16m");
-    property_overide("dalvik.vm.heapgrowthlimit", heapgrowthlimit);
-    property_overide("dalvik.vm.heapsize", "512m");
-    property_overide("dalvik.vm.heaptargetutilization", "0.75");
-    property_overide("dalvik.vm.heapminfree", heapminfree);
-    property_overide("dalvik.vm.heapmaxfree", "8m");
+    property_override("dalvik.vm.heapstartsize", "16m");
+    property_override("dalvik.vm.heapgrowthlimit", heapgrowthlimit);
+    property_override("dalvik.vm.heapsize", "512m");
+    property_override("dalvik.vm.heaptargetutilization", "0.75");
+    property_override("dalvik.vm.heapminfree", heapminfree);
+    property_override("dalvik.vm.heapmaxfree", "8m");
 }
